@@ -1,51 +1,15 @@
 <!doctype html>
-<title>Python Flask - Video Upload and Play Example</title>
 
 <head>
-	<!-- Required meta tags -->
+	<title>Python Flask - Video Upload and Play Example</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='./homepage.css') }}">>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 
-	<!-- Bootstrap CSS -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="upload.css" /> -->
-	<title>Hello, world!</title>
 </head>
-<style>
-	body {
-		font-family: 'Manrope', sans-serif;
-		transition: all ease 1600ms;
-		background-image: url('./11.jpg');
-		/* background-position: center center; */
-		/* background-repeat: no-repeat; */
-		/* background-attachment: fixed; */
-		/* background-size: cover; */
-		/* color: white; */
-		text-transform: uppercase
-			/* background-image: url("./img.jpg"); */
-			/* background-position: center center;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover; */
-	}
-
-	.upload {
-
-		display: grid;
-		place-items: center;
-		height: 100vh;
-
-
-	}
-</style>
-
-
-
 
 
 <p>
@@ -71,33 +35,23 @@
 	</video>
 </div>
 {% endif %}
-<img src="img.jpg" />
-<div class="container upload">
-	<h2>
-		<center>Select a video to upload and play</center>
-	</h2>
-	<form method="post" action="/" enctype="multipart/form-data">
-		<dl>
+<div class="overlay">
+	<div class="container upload">
+		<h2>
+			<center>Select a video to upload and play</center>
+		</h2>
+		<form method="post" action="/" enctype="multipart/form-data">
+			<dl>
+				<p>
+					<input type="file" name="rfile" autocomplete="off" required>
+				</p>
+				<p>
+					<input type="file" name="yfile" autocomplete="off" required>
+				</p>
+			</dl>
 			<p>
-				<input type="file" name="rfile" autocomplete="off" required>
+				<input type="submit" value="Upload">
 			</p>
-			<p>
-				<input type="file" name="yfile" autocomplete="off" required>
-			</p>
-		</dl>
-		<p>
-			<input type="submit" value="Upload">
-		</p>
-	</form>
-</div>
-<!-- <div class="container">
-	<div class="form-group" x-data="{ fileName: '' }">
-		<div class="input-group shadow">
-			<span class="input-group-text px-3 text-muted"><i class="fas fa-image fa-lg"></i></span>
-			<input type="file" x-ref="file" @change="fileName = $refs.file.files[0].name" name="img[]" class="d-none">
-			<input type="text" class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
-			<button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i
-					class="fas fa-image"></i> Browse</button>
-		</div>
+		</form>
 	</div>
-</div> -->
+</div>

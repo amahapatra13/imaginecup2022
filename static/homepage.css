@@ -1,0 +1,31 @@
+
+    body {
+		font-family: 'Manrope', sans-serif;
+		transition: all ease 1600ms;
+		background-image: url("11.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		color: white;
+		text-transform: uppercase;
+        overflow: hidden;
+		
+	}
+
+    .overlay{
+        position: absolute;
+        width : 100vw;
+        height : 100vw;
+        top:0;
+        bottom : 0;
+        background-color: rgba(24, 23, 23, 0.7);
+    }
+	.upload {
+
+		display: grid;
+		place-items: center;
+		height: 100vh;
+
+
+	}
